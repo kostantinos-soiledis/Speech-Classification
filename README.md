@@ -8,7 +8,7 @@ Our selected best performing model is a combination of 4 layers of a 2D Convolut
 - First, we ran a research about suitable models for multi-class audio classification. Our first candidates were Random Forest, Support Vector Machine, K-nearest Neighbours,  Convolutional Neural Network and Recurrent Neural Network. We decided to develop in parallel KNN, CNN and RNN models to see which performed the better.
 - About KNN, it yielded a very low accuracy of 0.359.
 - About CNN, we realized that the data is in the form of distinguishable images and can be well perceived by the specific algorithm. We decided to prioritize a Conv2D model, after seeing higher accuracies than Conv1D. The model’s highest test accuracy in codalab was 0.92.
-- About RNN, we followed the idea mentioned in [2] with the addition of two more LSTM layers, since RNN excel in capturing patterns in sequential data. The model’s accuracy was 0.905
+- About RNN. The model’s accuracy was 0.905
 - Then, we thought we could mix RNN with CNN since CNN is good in pattern recognition and RNN implements the time component needed for the classification.We added an LSTM neuron in the Conv2D model. The model’s testing accuracy was 0.933. 
 
 # Feature Engineering
@@ -21,7 +21,7 @@ Neural networks are known for their large number of hyperparameters that can be 
 
 # Discussion of the Solution’s Performance
 - Our model yielded a high predictive performance, given different trial and error approaches that we did:
-We had developed Conv2D and RNN models independently, and thought of combining them to achieve a better score, as we have read in [1] and discussed above.
+We had developed Conv2D and RNN models independently, and thought of combining them to achieve a better score.
 - Since we were dealing with time series, we thought of using LSTM neurons.
 - We did batch normalization because it prevents overfitting and improves speed, performance and stability.
 - We used various dropout values after each layer to prevent overfitting.
